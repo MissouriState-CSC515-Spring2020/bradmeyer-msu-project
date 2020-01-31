@@ -1,3 +1,5 @@
-# Repository for class project
+# Project Checkpoint 1
 
-This readme is a placeholder that should be replaced
+`npm run build` builds the application.
+
+`npm start` starts a local development server.
