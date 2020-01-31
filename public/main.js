@@ -4,6 +4,7 @@
 // logs will still point to your original source modules
 console.log('if you have sourcemaps enabled in your devtools, click on main.js:5 -->');
 
-import('./update.js').then(updateExports => {
+import('./update-8971de90.js').then(updateExports => {
 	update();
 });
+//# sourceMappingURL=main.js.map
