@@ -5,6 +5,6 @@
 console.log('if you have sourcemaps enabled in your devtools, click on main.js:5 -->');
 
 import('./update-8971de90.js').then(updateExports => {
-	update();
+	updateExports.default();
 });
 //# sourceMappingURL=main.js.map

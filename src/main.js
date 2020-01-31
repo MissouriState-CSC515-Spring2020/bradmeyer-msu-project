@@ -5,5 +5,5 @@
 console.log('if you have sourcemaps enabled in your devtools, click on main.js:5 -->');
 
 import('./update.js').then(updateExports => {
-	update();
+	updateExports.default();
 });
