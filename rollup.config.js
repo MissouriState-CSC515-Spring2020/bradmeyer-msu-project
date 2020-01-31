@@ -4,12 +4,14 @@ import { terser } from 'rollup-plugin-terser';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
-const production = !process.env.ROLLUP_WATCH;
+//const production = !process.env.ROLLUP_WATCH;
+const production = false;
 
 export default {
 	input: 'src/main.js',
 	output: {
-		file: 'public/bundle.js',
+		// file: 'public/bundle.js',
+		dir: 'public',
 		format: 'esm',
 		sourcemap: true
 	},
