@@ -1,4 +1,4 @@
-# Project Checkpoint 1
+# Project Checkpoint 2
 
 `npm run build` builds the application.
 
