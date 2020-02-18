@@ -2,7 +2,6 @@
   "name": "bradmeyer-msu-project",
   "version": "3.0.0",
   "description": "MSU CSC515/615 Spring 2020 project",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MissouriState-CSC515-Spring2020/bradmeyer-msu-project.git"
@@ -14,7 +13,6 @@
     "url": "https://github.com/MissouriState-CSC515-Spring2020/bradmeyer-msu-project/issues"
   },
   "homepage": "https://github.com/MissouriState-CSC515-Spring2020/bradmeyer-msu-project#readme",
-  "type": "module",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
@@ -37,5 +35,23 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
