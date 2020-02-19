@@ -1,125 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="robots" content="noindex,noarchive">
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-  
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-        <title>Brad's Recent Photos</title>
+    <title>Brad's Recent Photos</title>
 	</head>
 	<body>
-		<!-- dropdown structure for categories -->
-		<ul id="cat-dropdown" class="dropdown-content">
-			<li><a href="category.html">Buildings</a></li>
-			<li><a href="category.html">Food</a></li>
-			<li><a href="category.html">Robots</a></li>
-			<li><a href="category.html">Food Robots</a></li>
-			<li><a href="category.html">Owls</a></li>
-			<li><a href="category.html">Things on Fire</a></li>
-			<li><a href="category.html">Purple</a></li>
-			<li><a href="category.html">Magic Tricks</a></li>
-			<li><a href="category.html">Smells</a></li>
-		</ul>
-		<ul id="side-dropdown" class="dropdown-content">
-			<li><a href="category.html">Buildings</a></li>
-			<li><a href="category.html">Food</a></li>
-			<li><a href="category.html">Robots</a></li>
-			<li><a href="category.html">Food Robots</a></li>
-			<li><a href="category.html">Owls</a></li>
-			<li><a href="category.html">Things on Fire</a></li>
-			<li><a href="category.html">Purple</a></li>
-			<li><a href="category.html">Magic Tricks</a></li>
-			<li><a href="category.html">Smells</a></li>
-		</ul>
-
-		<nav class="teal darken-3" role="navigation">
-			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
-				<ul class="right hide-on-med-and-down">
-					<li class="active"><a href="/">Recent</a></li>
-					<!-- Dropdown Trigger -->
-					<li><a class="dropdown-trigger" href="#!" data-target="cat-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-				</ul>
-		
-				<ul id="nav-mobile" class="sidenav">
-					<li class="active"><a href="/">Recent</a></li>
-					<!-- Dropdown Trigger -->
-					<li><a class="side-dropdown-trigger" href="#!" data-target="side-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-				</ul>
-				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			</div>
-		</nav>
-
-		<div class="container">
-			<div class="section">
-				<h3 class="header center teal-text">Brad's Recent Photos</h3>
-			</div>
-
-			<div class="section">
-				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/jqh_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/basspro_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/centralhs_med.jpg"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/drury_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/footbridge_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/greenway_med.jpg"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/mercy_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/mexicanvilla_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/springfield_med.jpg"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s4 offset-s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/tumbler_med.jpg"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!--JavaScript at end of body for optimized loading-->
-	  	<script type="text/javascript" src="js/materialize.js"></script>
-	  	<script type="text/javascript" src="js/main.js"></script>
+		<noscript>
+			<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
 	</body>
-	
-	<footer class="page-footer teal darken-1">
-		<div class="container">
-			<div class="row">
-				<h6 class="grey-text text-lighten-4">This is a project for CSC 515/615 Advanced Internet Programming at
-					<a class="white-text" href="https://www.missouristate.edu" target="_blank">Missouri State University</a>.
-				</h6>
-
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				Copyright © 2020 Brad Meyer
-			</div>
-        </div>
-	</footer>
 </html>
