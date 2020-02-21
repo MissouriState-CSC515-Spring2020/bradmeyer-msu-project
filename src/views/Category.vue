@@ -8,24 +8,24 @@
     <div class="section">
       <div class="row">
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_med.jpg"></router-link>
         </div>
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/drury_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/drury_med.jpg"></router-link>
         </div>
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/jqh_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/jqh_med.jpg"></router-link>
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/centralhs_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/centralhs_med.jpg"></router-link>
         </div>
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/mercy_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mercy_med.jpg"></router-link>
         </div>
         <div class="col s4">
-          <a href="photodetails"><img class="responsive-img hoverable" src="img/basspro_med.jpg"></a>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/basspro_med.jpg"></router-link>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="section">
       <ul class="pagination center">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active red lighten-1"><a href="category">1</a></li>
+        <li class="active red lighten-1"><router-link to="category">1</router-link></li>
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
       </ul>
     </div>
