@@ -10,17 +10,26 @@ const routes = [
 	{
 		path: '/',
 		name: 'Recent',
-		component: Recent
+		component: Recent,
+		meta: {
+			title: 'Brad\'s Recent Photos'
+		}
 	},
 	{
 		path: '/category',
 		name: 'Category',
-		component: Category
+		component: Category,
+		meta: {
+			title: 'Category: Buildings'
+		}
 	},
 	{
 		path: '/photodetails',
 		name: 'PhotoDetails',
-		component: PhotoDetails
+		component: PhotoDetails,
+		meta: {
+			title: 'Photo Details'
+		}
 	}
 ];
 
@@ -28,6 +37,15 @@ const router = new VueRouter({
 	mode: 'history',
 	base: process.env.BASE_URL,
 	routes
+});
+
+// eslint-disable-next-line no-unused-vars
+router.afterEach((to, from) => {
+	// Use next tick to handle router history correctly
+	// see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
+	Vue.nextTick(() => {
+		document.title = to.meta.title || 'Photo App Project';
+	});
 });
 
 export default router;
