@@ -1,45 +1,46 @@
 <template>
   <div>
+    <nav class="teal darken-3">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
+        <ul class="right hide-on-med-and-down">
+          <li><router-link to="/">Recent</router-link></li>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="mobile-menu" class="sidenav">
+          <li><router-link to="/">Recent</router-link></li>
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
 		<!-- dropdown structure for categories -->
-		<ul id="cat-dropdown" class="dropdown-content">
-			<li><a href="category">Buildings</a></li>
-			<li><a href="category">Food</a></li>
-			<li><a href="category">Robots</a></li>
-			<li><a href="category">Food Robots</a></li>
-			<li><a href="category">Owls</a></li>
-			<li><a href="category">Things on Fire</a></li>
-			<li><a href="category">Purple</a></li>
-			<li><a href="category">Magic Tricks</a></li>
-			<li><a href="category">Smells</a></li>
+		<ul id="dropdown1" class="dropdown-content">
+			<li><router-link to="category">Buildings</router-link></li>
+			<li><router-link to="category">Food</router-link></li>
+			<li><router-link to="category">Robots</router-link></li>
+			<li><router-link to="category">Food Robots</router-link></li>
+			<li><router-link to="category">Owls</router-link></li>
+			<li><router-link to="category">Things on Fire</router-link></li>
+			<li><router-link to="category">Purple</router-link></li>
+			<li><router-link to="category">Magic Tricks</router-link></li>
+			<li><router-link to="category">Smells</router-link></li>
 		</ul>
-		<ul id="side-dropdown" class="dropdown-content">
-			<li><a href="category">Buildings</a></li>
-			<li><a href="category">Food</a></li>
-			<li><a href="category">Robots</a></li>
-			<li><a href="category">Food Robots</a></li>
-			<li><a href="category">Owls</a></li>
-			<li><a href="category">Things on Fire</a></li>
-			<li><a href="category">Purple</a></li>
-			<li><a href="category">Magic Tricks</a></li>
-			<li><a href="category">Smells</a></li>
+		<ul id="dropdown2" class="dropdown-content">
+			<li><router-link to="category">Buildings</router-link></li>
+			<li><router-link to="category">Food</router-link></li>
+			<li><router-link to="category">Robots</router-link></li>
+			<li><router-link to="category">Food Robots</router-link></li>
+			<li><router-link to="category">Owls</router-link></li>
+			<li><router-link to="category">Things on Fire</router-link></li>
+			<li><router-link to="category">Purple</router-link></li>
+			<li><router-link to="category">Magic Tricks</router-link></li>
+			<li><router-link to="category">Smells</router-link></li>
 		</ul>
 
-		<nav class="teal darken-3" role="navigation">
-			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
-				<ul class="right hide-on-med-and-down">
-					<li class="active"><a href="/">Recent</a></li>
-					<!-- Dropdown Trigger -->
-					<li><a class="dropdown-trigger" href="#!" data-target="cat-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-				</ul>
-		
-				<ul id="nav-mobile" class="sidenav">
-					<li class="active"><a href="/">Recent</a></li>
-					<!-- Dropdown Trigger -->
-					<li><a class="side-dropdown-trigger" href="#!" data-target="side-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-				</ul>
-				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			</div>
-		</nav>
   </div>
 </template>
 
@@ -54,5 +55,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
