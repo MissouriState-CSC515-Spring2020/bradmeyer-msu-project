@@ -17,30 +17,30 @@
       </div>
     </nav>
 
-		<!-- dropdown structure for categories -->
-		<ul id="dropdown1" class="dropdown-content">
-			<li><router-link to="category">Buildings</router-link></li>
-			<li><router-link to="category">Food</router-link></li>
-			<li><router-link to="category">Robots</router-link></li>
-			<li><router-link to="category">Food Robots</router-link></li>
-			<li><router-link to="category">Owls</router-link></li>
-			<li><router-link to="category">Things on Fire</router-link></li>
-			<li><router-link to="category">Purple</router-link></li>
-			<li><router-link to="category">Magic Tricks</router-link></li>
-			<li><router-link to="category">Smells</router-link></li>
-		</ul>
-		<ul id="dropdown2" class="dropdown-content">
-			<li><router-link to="category">Buildings</router-link></li>
-			<li><router-link to="category">Food</router-link></li>
-			<li><router-link to="category">Robots</router-link></li>
-			<li><router-link to="category">Food Robots</router-link></li>
-			<li><router-link to="category">Owls</router-link></li>
-			<li><router-link to="category">Things on Fire</router-link></li>
-			<li><router-link to="category">Purple</router-link></li>
-			<li><router-link to="category">Magic Tricks</router-link></li>
-			<li><router-link to="category">Smells</router-link></li>
-		</ul>
-
+    <!-- dropdown structure for categories -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><router-link to="category">Buildings</router-link></li>
+        <li><router-link to="category">Food</router-link></li>
+        <li><router-link to="category">Robots</router-link></li>
+        <li><router-link to="category">Food Robots</router-link></li>
+        <li><router-link to="category">Owls</router-link></li>
+        <li><router-link to="category">Things on Fire</router-link></li>
+        <li><router-link to="category">Purple</router-link></li>
+        <li><router-link to="category">Magic Tricks</router-link></li>
+        <li><router-link to="category">Smells</router-link></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><router-link to="category">Buildings</router-link></li>
+        <li><router-link to="category">Food</router-link></li>
+        <li><router-link to="category">Robots</router-link></li>
+        <li><router-link to="category">Food Robots</router-link></li>
+        <li><router-link to="category">Owls</router-link></li>
+        <li><router-link to="category">Things on Fire</router-link></li>
+        <li><router-link to="category">Purple</router-link></li>
+        <li><router-link to="category">Magic Tricks</router-link></li>
+        <li><router-link to="category">Smells</router-link></li>
+    </ul>
+  
   </div>
 </template>
 
@@ -48,7 +48,7 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
-	mounted() {
+  mounted() {
     M.AutoInit(); // That way, it is only initialized when the component is mounted
   }
 }
