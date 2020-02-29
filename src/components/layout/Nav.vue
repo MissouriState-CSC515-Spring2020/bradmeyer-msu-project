@@ -2,7 +2,7 @@
   <div>
     <nav class="teal darken-3">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
+        <a id="logo-container" href="/" class="brand-logo">Photo App</a>
         <ul class="right hide-on-med-and-down">
           <li><router-link to="/">Recent</router-link></li>
           <!-- Dropdown Trigger -->
