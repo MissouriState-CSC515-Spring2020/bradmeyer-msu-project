@@ -18,11 +18,14 @@
               <a href="https://nodejs.org/" target="_blank" class="yellow-text text-lighten-3">Node.js</a>
             </li>
             <li class="valign-wrapper"><i class="material-icons">chevron_right</i>
+              <a href="https://vuejs.org/" target="_blank" class="yellow-text text-lighten-3">Vue.js</a>
+            </li>
+            <li class="valign-wrapper"><i class="material-icons">chevron_right</i>
               <a href="https://materializecss.com/" target="_blank" class="yellow-text text-lighten-3">Materialize CSS</a>
             </li>
             <li class="valign-wrapper"><i class="material-icons">chevron_right</i>
-              <a href="https://icons8.com/icons/set/stack-of-photos--v1" target="_blank" class="yellow-text text-lighten-3">
-                Photo Gallery icon</a> _by_
+              <a href="https://icons8.com/icons/set/stack-of-photos--v1" target="_blank" class="yellow-text text-lighten-3">Photo Gallery icon</a>
+              <span id="by">by</span>
               <a href="https://icons8.com/" target="_blank" class="yellow-text text-lighten-3">Icons8</a>
             </li>
           </ul>
@@ -44,4 +47,8 @@ export default {
 </script>
 
 <style scoped>
+#by {
+  padding-left: .5em;
+  padding-right: .5em;
+}
 </style>
