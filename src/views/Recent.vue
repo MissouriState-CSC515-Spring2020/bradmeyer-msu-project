@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="section">
-      <h3 class="header center teal-text">Brad's Recent Photos</h3>
+      <h3 class="header center teal-text">{{user}}'s Recent Photos</h3>
     </div>
 
     <div class="section">
@@ -49,6 +49,11 @@
 
 <script>
 export default {
-  name: 'Recent'
+  name: 'Recent',
+  data() {
+    return {
+      user: 'Brad'
+    }
+  }
 }
 </script>

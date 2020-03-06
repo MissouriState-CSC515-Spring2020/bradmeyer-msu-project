@@ -12,7 +12,7 @@ const routes = [
 		name: 'Recent',
 		component: Recent,
 		meta: {
-			title: 'Brad\'s Recent Photos'
+			title: 'Recent Photos'
 		}
 	},
 	{
