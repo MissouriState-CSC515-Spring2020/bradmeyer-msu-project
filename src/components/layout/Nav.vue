@@ -61,39 +61,39 @@ export default {
       categories: [
         {
           name: 'Buildings',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Food',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Robots',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Food Robots',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Owls',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Things on Fire',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Purple',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Magic Tricks',
-          route: '/category'
+          route: 'category'
         },
         {
           name: 'Smells',
-          route: '/category'
+          route: 'category'
         }
       ]
     }
