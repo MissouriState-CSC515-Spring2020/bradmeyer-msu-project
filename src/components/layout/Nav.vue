@@ -3,7 +3,7 @@
     <nav class="teal darken-3">
       <div class="nav-wrapper container">
           <span id="logo-container">
-            <a href="/"><img class="icon hide-on-med-and-down" src="/img/icons/icons8-photo-gallery-96.png" width="65"></a>
+            <a href="/"><img class="icon hide-on-med-and-down" src="img/icons/icons8-photo-gallery-96.png" width="65"></a>
             <a href="/" class="brand-logo">Photo App</a>
           </span>
 
