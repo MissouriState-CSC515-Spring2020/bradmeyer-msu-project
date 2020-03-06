@@ -55,7 +55,7 @@ import M from 'materialize-css';
 export default {
   name: 'Nav',
   mounted() {
-    M.AutoInit(); // That way, it is only initialized when the component is mounted
+    M.AutoInit();
   }
 }
 </script>
