@@ -3,7 +3,7 @@
     <nav class="teal darken-3">
       <div class="nav-wrapper container">
           <span id="logo-container">
-            <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icon/icons_photo_gallery.png" width="65"></router-link>
+            <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icons/icon_photo_gallery.png" width="65"></router-link>
             <router-link to="/" class="brand-logo">Photo App</router-link>
           </span>
 
