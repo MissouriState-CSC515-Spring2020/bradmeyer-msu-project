@@ -8,19 +8,31 @@
           </span>
 
           <ul class="right hide-on-med-and-down">
-            <li v-if="this.$route.name == 'PhotoDetails'" class="active"><router-link to="/photodetails">Photo Details</router-link></li>
-            <li v-bind:class="{ active: classObject.activeRecent }"><router-link to="/">Recent</router-link></li>
+            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
+              <router-link to="/photodetails">Photo Details</router-link>
+            </li>
+            <li v-bind:class="{ active: activeObject.activeRecent }">
+              <router-link to="/">Recent</router-link>
+            </li>
             <!-- Dropdown Trigger -->
-            <li v-bind:class="{ active: classObject.activeCategory }"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li v-bind:class="{ active: activeObject.activeCategory }">
+              <a class="dropdown-trigger" href="#!" data-target="dropdown1">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
           </ul>
 
           <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
           <ul id="mobile-menu" class="sidenav">
-            <li v-if="this.$route.name == 'PhotoDetails'" class="active"><router-link to="/photodetails">Photo Details</router-link></li>
-            <li v-bind:class="{ active: classObject.activeRecent }"><router-link to="/">Recent</router-link></li>
+            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
+              <router-link to="/photodetails">Photo Details</router-link>
+            </li>
+            <li v-bind:class="{ active: activeObject.activeRecent }">
+              <router-link to="/">Recent</router-link>
+            </li>
             <!-- Dropdown Trigger -->
-            <li v-bind:class="{ active: classObject.activeCategory }"><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li v-bind:class="{ active: activeObject.activeCategory }">
+              <a class="dropdown-trigger" href="#!" data-target="dropdown2">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
           </ul>
       </div>
     </nav>
@@ -87,10 +99,19 @@ export default {
     }
   },
   computed: {
-    classObject: function () {
+    activeObject: function () {
       return {
         activeRecent: this.$route.name == 'Recent',
         activeCategory: this.$route.name == 'Category'
+      }
+    },
+    categoryObject: function () {
+      let cat = 'Categories';
+      if (this.$route.name == 'Category') {
+        cat = 'Category: Buildings';
+      }
+      return {
+        name: cat
       }
     }
   },
