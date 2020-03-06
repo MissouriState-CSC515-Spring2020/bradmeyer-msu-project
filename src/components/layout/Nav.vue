@@ -25,26 +25,14 @@
 
     <!-- dropdown structure for categories -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><router-link to="category">Buildings</router-link></li>
-        <li><router-link to="category">Food</router-link></li>
-        <li><router-link to="category">Robots</router-link></li>
-        <li><router-link to="category">Food Robots</router-link></li>
-        <li><router-link to="category">Owls</router-link></li>
-        <li><router-link to="category">Things on Fire</router-link></li>
-        <li><router-link to="category">Purple</router-link></li>
-        <li><router-link to="category">Magic Tricks</router-link></li>
-        <li><router-link to="category">Smells</router-link></li>
+      <li v-bind:key="category.name" v-for="category in categories">
+        <router-link :to=category.route>{{category.name}}</router-link>
+      </li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-        <li><router-link to="category">Buildings</router-link></li>
-        <li><router-link to="category">Food</router-link></li>
-        <li><router-link to="category">Robots</router-link></li>
-        <li><router-link to="category">Food Robots</router-link></li>
-        <li><router-link to="category">Owls</router-link></li>
-        <li><router-link to="category">Things on Fire</router-link></li>
-        <li><router-link to="category">Purple</router-link></li>
-        <li><router-link to="category">Magic Tricks</router-link></li>
-        <li><router-link to="category">Smells</router-link></li>
+      <li v-bind:key="category.name" v-for="category in categories">
+        <router-link :to=category.route>{{category.name}}</router-link>
+      </li>
     </ul>
   
   </div>
@@ -54,6 +42,48 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
+  data() {
+    return {
+      categories: [
+        {
+          name: 'Buildings',
+          route: 'category'
+        },
+        {
+          name: 'Food',
+          route: 'category'
+        },
+        {
+          name: 'Robots',
+          route: 'category'
+        },
+        {
+          name: 'Food Robots',
+          route: 'category'
+        },
+        {
+          name: 'Owls',
+          route: 'category'
+        },
+        {
+          name: 'Things on Fire',
+          route: 'category'
+        },
+        {
+          name: 'Purple',
+          route: 'category'
+        },
+        {
+          name: 'Magic Tricks',
+          route: 'category'
+        },
+        {
+          name: 'Smells',
+          route: 'category'
+        }
+      ]
+    }
+  },
   mounted() {
     M.AutoInit();
   }
