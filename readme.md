@@ -1,5 +1,5 @@
-# Project Checkpoint 1
+# Project Checkpoint 2
 
-`npm run build` builds the application.
+No build required for this one... just static html pages.
 
 `npm start` starts a local development server.

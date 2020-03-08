@@ -11,7 +11,7 @@
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-        <title>Brad's Recent Photos</title>
+        <title>Photo Details</title>
 	</head>
 	<body>
 		<!-- dropdown structure for categories -->
@@ -41,13 +41,15 @@
 		<nav class="teal darken-3" role="navigation">
 			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
 				<ul class="right hide-on-med-and-down">
-					<li class="active"><a href="/">Recent</a></li>
+					<li class="active"><a href="photodetails.html">Photo Details</a></li>
+					<li><a href="/">Recent</a></li>
 					<!-- Dropdown Trigger -->
 					<li><a class="dropdown-trigger" href="#!" data-target="cat-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
 				</ul>
 		
 				<ul id="nav-mobile" class="sidenav">
-					<li class="active"><a href="/">Recent</a></li>
+					<li class="active"><a href="photodetails.html">Photo Details</a></li>
+					<li><a href="/">Recent</a></li>
 					<!-- Dropdown Trigger -->
 					<li><a class="side-dropdown-trigger" href="#!" data-target="side-dropdown">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
 				</ul>
@@ -57,56 +59,41 @@
 
 		<div class="container">
 			<div class="section">
-				<h3 class="header center teal-text">Brad's Recent Photos</h3>
+				<h3 class="header center teal-text">Photo Details</h3>
 			</div>
 
 			<div class="section">
 				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/jqh_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/basspro_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/centralhs_med.jpg"></a>
+					<div class="col s12">
+						<img class="responsive-img" src="img/jqh_med.jpg">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/drury_med.jpg"></a>
+					<div class="col s6">
+						<div class="card teal lighten-5">
+							<div class="card-content">
+								<span class="card-title">JQH Arena</span>
+								<p>JQH Arena on the campus of Missouri State University.</p>
+							</div>
+						</div>
 					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/footbridge_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/greenway_med.jpg"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/mercy_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/mexicanvilla_med.jpg"></a>
-					</div>
-					<div class="col s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/springfield_med.jpg"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s4 offset-s4">
-						<a href="photodetails.html"><img class="responsive-img hoverable" src="img/tumbler_med.jpg"></a>
+					<div class="col s6">
+						<ul class="collection">
+							<li class="collection-item">filename: jqh_med.jpg</li>
+							<li class="collection-item">date taken: 8/14/2017</li>
+							<li class="collection-item">size: 3000 x 2000 px</li>
+							<li class="collection-item">resolution: 72 x 72 dpi</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<!--JavaScript at end of body for optimized loading-->
-	  	<script type="text/javascript" src="js/materialize.js"></script>
+      	<script type="text/javascript" src="js/materialize.js"></script>
 	  	<script type="text/javascript" src="js/main.js"></script>
 	</body>
-	
+
 	<footer class="page-footer teal darken-1">
 		<div class="container">
 			<div class="row">

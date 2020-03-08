@@ -1,9 +1,5 @@
-//import update from './update.js';
-
-// even though Rollup is bundling all your files together, errors and
-// logs will still point to your original source modules
-console.log('if you have sourcemaps enabled in your devtools, click on main.js:5 -->');
-
-import('./update.js').then(updateExports => {
-	updateExports.default();
+'use strict';
+document.addEventListener('DOMContentLoaded', function() {
+	let dropdown1 = document.querySelector('.dropdown-content');
+	let instanceDropdown1 = M.Dropdown.init(dropdown1, dropdownOptions);
 });
