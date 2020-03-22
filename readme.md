@@ -1,5 +1,7 @@
-# Project Checkpoint 2
+# Project Checkpoint 3
 
-No build required for this one... just static html pages.
+Clone checkpoint-03 branch.
 
-`npm start` starts a local development server.
+`npm install`
+
+`npm run serve` starts a local development server on port 8080.
