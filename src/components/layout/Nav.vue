@@ -11,11 +11,11 @@
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
               <router-link to="/videodetails">Video Details</router-link>
             </li>
-            <li v-bind:class="{ active: activeObject.activeRecent }">
+            <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
             </li>
             <!-- Dropdown Trigger -->
-            <li v-bind:class="{ active: activeObject.activeCategory }">
+            <li v-bind:class="playlistClassObj">
               <a class="dropdown-trigger" href="#!" data-target="dropdown1">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
             </li>
           </ul>
@@ -26,11 +26,11 @@
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
               <router-link to="/videodetails">Video Details</router-link>
             </li>
-            <li v-bind:class="{ active: activeObject.activeRecent }">
+            <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
             </li>
             <!-- Dropdown Trigger -->
-            <li v-bind:class="{ active: activeObject.activeCategory }">
+            <li v-bind:class="playlistClassObj">
               <a class="dropdown-trigger" href="#!" data-target="dropdown2">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
             </li>
           </ul>
@@ -99,10 +99,14 @@ export default {
     }
   },
   computed: {
-    activeObject: function () {
+    recentClassObj: function () {
       return {
-        activeRecent: this.$route.name == 'Recent',
-        activeCategory: this.$route.name == 'Category'
+        active: this.$route.name == 'Recent'
+      }
+    },
+    playlistClassObj: function () {
+      return {
+        active: this.$route.name == 'Category'
       }
     },
     categoryObject: function () {
