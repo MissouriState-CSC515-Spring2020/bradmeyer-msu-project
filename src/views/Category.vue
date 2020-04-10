@@ -2,30 +2,30 @@
   <div class="container">
     <div class="section">
       <h3 class="header center teal-text">Buildings</h3>
-      <h5 class="center teal-text text-lighten-2">6 photos</h5>
+      <h5 class="center teal-text text-lighten-2">6 videos</h5>
     </div>
 
     <div class="section">
       <div class="row">
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/drury_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/drury_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/jqh_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/jqh_small.jpg"></router-link>
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/centralhs_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/centralhs_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mercy_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/mercy_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/basspro_small.jpg"></router-link>
+          <router-link to="videodetails"><img class="responsive-img hoverable" src="img/basspro_small.jpg"></router-link>
         </div>
       </div>
     </div>

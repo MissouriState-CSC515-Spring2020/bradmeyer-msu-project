@@ -4,12 +4,12 @@
       <div class="nav-wrapper container">
           <span id="logo-container">
             <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icon_photo_gallery.png" width="65"></router-link>
-            <router-link to="/" class="brand-logo">Photo App</router-link>
+            <router-link to="/" class="brand-logo">Video App</router-link>
           </span>
 
           <ul class="right hide-on-med-and-down">
-            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
-              <router-link to="/photodetails">Photo Details</router-link>
+            <li v-if="this.$route.name == 'VideoDetails'" class="active">
+              <router-link to="/videodetails">Video Details</router-link>
             </li>
             <li v-bind:class="{ active: activeObject.activeRecent }">
               <router-link to="/">Recent</router-link>
@@ -23,8 +23,8 @@
           <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
           <ul id="mobile-menu" class="sidenav">
-            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
-              <router-link to="/photodetails">Photo Details</router-link>
+            <li v-if="this.$route.name == 'VideoDetails'" class="active">
+              <router-link to="/videodetails">Video Details</router-link>
             </li>
             <li v-bind:class="{ active: activeObject.activeRecent }">
               <router-link to="/">Recent</router-link>

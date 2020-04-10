@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="section">
-      <h3 class="header center teal-text">Photo Details</h3>
+      <h3 class="header center teal-text">Video Details</h3>
     </div>
 
     <div class="section">
@@ -34,6 +34,6 @@
 
 <script>
 export default {
-	name: 'PhotoDetails'
+	name: 'VideoDetails'
 }
 </script>
