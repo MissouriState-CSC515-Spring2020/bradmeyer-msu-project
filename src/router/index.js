@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Recent from '../views/Recent.vue';
-import Category from '../views/Category.vue';
+import Playlist from '../views/Playlist.vue';
 import VideoDetails from '../views/VideoDetails.vue';
 
 Vue.use(VueRouter);
@@ -16,9 +16,10 @@ const routes = [
 		}
 	},
 	{
-		path: '/category',
-		name: 'Category',
-		component: Category,
+		path: '/playlist',
+		name: 'Playlist',
+		component: Playlist,
+		props: true,
 		meta: {
 			title: 'Playlist'
 		}
