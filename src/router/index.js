@@ -12,7 +12,7 @@ const routes = [
 		name: 'Recent',
 		component: Recent,
 		meta: {
-			title: 'Recent Photos'
+			title: 'Recent Videos'
 		}
 	},
 	{
@@ -20,7 +20,7 @@ const routes = [
 		name: 'Category',
 		component: Category,
 		meta: {
-			title: 'Category: Buildings'
+			title: 'Playlist'
 		}
 	},
 	{
