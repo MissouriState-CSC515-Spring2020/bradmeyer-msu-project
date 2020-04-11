@@ -27,6 +27,7 @@ const routes = [
 		path: '/videodetails',
 		name: 'VideoDetails',
 		component: VideoDetails,
+		props: true,
 		meta: {
 			title: 'Video Details'
 		}

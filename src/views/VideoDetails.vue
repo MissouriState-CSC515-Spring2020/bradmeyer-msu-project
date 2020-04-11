@@ -2,29 +2,31 @@
   <div class="container">
     <div class="section">
       <h3 class="header center teal-text">Video Details</h3>
+      <div v-if="loading" class="center">Loading...</div>
+      <div v-if="error" class="center">{{ error }}</div>
     </div>
 
     <div class="section">
       <div class="row">
-        <div class="col s12">
-          <img class="responsive-img" src="img/jqh_med.jpg">
+        <div v-if="videoData" class="col s12">
+          <img class="center" v-bind:src=videoData.items[0].snippet.thumbnails.high.url>
         </div>
       </div>
-      <div class="row">
+      <div v-if="videoData" class="row">
         <div class="col s6">
           <div class="card teal lighten-5">
             <div class="card-content">
-              <span class="card-title">JQH Arena</span>
-              <p>JQH Arena on the campus of Missouri State University.</p>
+              <span class="card-title">{{ videoData.items[0].snippet.title }}</span>
+              <p>{{ videoData.items[0].snippet.description }}</p>
             </div>
           </div>
         </div>
         <div class="col s6">
           <ul class="collection">
-            <li class="collection-item">filename: jqh_med.jpg</li>
-            <li class="collection-item">date taken: 8/14/2017</li>
-            <li class="collection-item">size: 3000 x 2000 px</li>
-            <li class="collection-item">resolution: 72 x 72 dpi</li>
+            <li class="collection-item">Views: {{ videoData.items[0].statistics.viewCount }}</li>
+            <li class="collection-item">Likes: {{ videoData.items[0].statistics.likeCount }}</li>
+            <li class="collection-item">Dislikes: {{ videoData.items[0].statistics.dislikeCount }}</li>
+            <li class="collection-item">Comments: {{ videoData.items[0].statistics.commentCount }}</li>
           </ul>
         </div>
       </div>
@@ -33,7 +35,50 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-	name: 'VideoDetails'
+  name: 'VideoDetails',
+  data() {
+    return {
+      loading: false,
+      error: null,
+      videoData: null
+    }
+  },
+  created() {
+    // called when the view is created
+    this.fetchData()
+  },
+  watch: {
+    // call again if the route changes
+    '$route': 'fetchData',
+  },
+  methods: {
+    fetchData() {
+      this.loading = true;
+      this.error = null;
+      this.videoData = null;
+      if (!this.$route.query.id) {
+        this.loading = false;
+        this.error = "No video id specified.";
+        return
+      }
+      axios
+        .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.$route.query.id}&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc&part=snippet,statistics`)
+        .then(response => {
+          this.loading = false;
+          if (response.data.pageInfo.totalResults == 0) {
+            this.error = `${this.$route.query.id} is not a valid YouTube video ID.`
+          } else {
+            this.videoData = response.data;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          this.loading = false;
+          this.error = "Something went wrong while fetching the video data."
+        })
+    }
+  }
 }
 </script>
