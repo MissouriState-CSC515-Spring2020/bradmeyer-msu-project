@@ -10,24 +10,24 @@
     <div v-if="data" class="section">
       <div class="row">
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[0] />
+          <VideoCard v-bind:info=data.items[0] />
         </div>
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[1] />
+          <VideoCard v-bind:info=data.items[1] />
         </div>
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[2] />
+          <VideoCard v-bind:info=data.items[2] />
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[3] />
+          <VideoCard v-bind:info=data.items[3] />
         </div>
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[4] />
+          <VideoCard v-bind:info=data.items[4] />
         </div>
         <div class="col s4">
-          <PlaylistCard v-bind:info=data.items[5] />
+          <VideoCard v-bind:info=data.items[5] />
         </div>
       </div>
     </div>
@@ -43,12 +43,12 @@
 </template>
 
 <script>
-import PlaylistCard from '../components/widgets/PlaylistCard'
+import VideoCard from '../components/widgets/VideoCard'
 import axios from 'axios';
 export default {
   name: 'Playlist',
   components: {
-    PlaylistCard
+    VideoCard
   },
   data() {
     return {
