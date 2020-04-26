@@ -80,7 +80,7 @@ export default {
         .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=6&playlistId=${this.$route.query.id}&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc`)
         .then(response => {
           this.loading = false;
-          console.log(response.data);
+          // console.log(response.data);
           if (response.data.pageInfo.totalResults == 0) {
             this.error = `${this.$route.query.id} is not a valid YouTube playlist ID.`
           } else {
@@ -88,6 +88,7 @@ export default {
           }
         })
         .catch(error => {
+          // eslint-disable-next-line no-console
           console.log(error);
           this.loading = false;
           this.error = "Something went wrong while fetching the playlist data."

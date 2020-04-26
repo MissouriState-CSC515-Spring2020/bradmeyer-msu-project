@@ -74,6 +74,7 @@ export default {
           }
         })
         .catch(error => {
+          // eslint-disable-next-line no-console
           console.log(error);
           this.loading = false;
           this.error = "Something went wrong while fetching the video data."
