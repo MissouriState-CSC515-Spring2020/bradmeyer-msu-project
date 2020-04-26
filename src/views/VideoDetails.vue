@@ -38,6 +38,7 @@
 import axios from 'axios';
 export default {
   name: 'VideoDetails',
+  props: ["channelName", "channelId"],
   data() {
     return {
       loading: false,

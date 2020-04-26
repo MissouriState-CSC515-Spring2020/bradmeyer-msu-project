@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav v-bind="channel"/>
-    <router-view />
+    <router-view v-bind="channel"/>
     <Footer />
   </div>
 </template>

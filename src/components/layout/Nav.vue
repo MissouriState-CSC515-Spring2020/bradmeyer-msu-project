@@ -103,10 +103,13 @@ export default {
       }
     },
     playlistNameObj: function () {
+      // This was originally so that the navbar could show the name
+      // of the selected playlist, but it might be really long, and
+      // there are lots of other reasons that might be a bad idea
       let pl = 'Playlists';
-      if (this.$route.name == 'Playlist') {
-        pl = 'Playlist';
-      }
+      // if (this.$route.name == 'Playlist') {
+      //  pl = 'Playlist';
+      // }
       return {
         name: pl
       }
