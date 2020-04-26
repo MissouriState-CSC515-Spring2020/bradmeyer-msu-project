@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Nav />
+    <Nav v-bind="channel"/>
     <router-view />
     <Footer />
   </div>
@@ -14,6 +14,14 @@ export default {
   components: {
     Nav,
     Footer
+  },
+  data() {
+    return {
+      channel: {
+        channelName: 'SpaceX',
+        channelId: 'UCtI0Hodo5o5dUb67FeUjDeA'
+      }
+    }
   }
 }
 </script>

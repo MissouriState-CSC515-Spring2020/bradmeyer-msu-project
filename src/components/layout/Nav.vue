@@ -9,7 +9,7 @@
 
           <ul class="right hide-on-med-and-down">
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
-              <router-link to="/videodetails">Video Details</router-link>
+              <a href="#">Video Details</a>
             </li>
             <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
@@ -24,7 +24,7 @@
 
           <ul id="mobile-menu" class="sidenav">
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
-              <router-link to="/videodetails">Video Details</router-link>
+              <a href="#">Video Details</a>
             </li>
             <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
@@ -56,6 +56,7 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
+  props: ["channelName", "channelID"],
   data() {
     return {
       categories: [
