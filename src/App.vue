@@ -14,12 +14,7 @@ export default {
   components: {
     Nav,
     Footer
-  },
-  // watch: {
-  //   '$route' (to) {
-  //     document.title = to.meta.title || 'Photo App Project';
-  //   }
-  // }
+  }
 }
 </script>
 

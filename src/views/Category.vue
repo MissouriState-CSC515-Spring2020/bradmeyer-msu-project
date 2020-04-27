@@ -8,24 +8,24 @@
     <div class="section">
       <div class="row">
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mexicanvilla_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/drury_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/drury_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/jqh_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/jqh_small.jpg"></router-link>
         </div>
       </div>
       <div class="row">
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/centralhs_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/centralhs_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mercy_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/mercy_small.jpg"></router-link>
         </div>
         <div class="col s4">
-          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/basspro_med.jpg"></router-link>
+          <router-link to="photodetails"><img class="responsive-img hoverable" src="img/basspro_small.jpg"></router-link>
         </div>
       </div>
     </div>

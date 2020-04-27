@@ -2,43 +2,51 @@
   <div>
     <nav class="teal darken-3">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo">NoLogoYet</a>
-        <ul class="right hide-on-med-and-down">
-          <li><router-link to="/">Recent</router-link></li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="mobile-menu" class="sidenav">
-          <li><router-link to="/">Recent</router-link></li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
+          <span id="logo-container">
+            <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icon_photo_gallery.png" width="65"></router-link>
+            <router-link to="/" class="brand-logo">Photo App</router-link>
+          </span>
+
+          <ul class="right hide-on-med-and-down">
+            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
+              <router-link to="/photodetails">Photo Details</router-link>
+            </li>
+            <li v-bind:class="{ active: activeObject.activeRecent }">
+              <router-link to="/">Recent</router-link>
+            </li>
+            <!-- Dropdown Trigger -->
+            <li v-bind:class="{ active: activeObject.activeCategory }">
+              <a class="dropdown-trigger" href="#!" data-target="dropdown1">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+          </ul>
+
+          <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+          <ul id="mobile-menu" class="sidenav">
+            <li v-if="this.$route.name == 'PhotoDetails'" class="active">
+              <router-link to="/photodetails">Photo Details</router-link>
+            </li>
+            <li v-bind:class="{ active: activeObject.activeRecent }">
+              <router-link to="/">Recent</router-link>
+            </li>
+            <!-- Dropdown Trigger -->
+            <li v-bind:class="{ active: activeObject.activeCategory }">
+              <a class="dropdown-trigger" href="#!" data-target="dropdown2">{{categoryObject.name}}<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+          </ul>
       </div>
     </nav>
 
     <!-- dropdown structure for categories -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><router-link to="category">Buildings</router-link></li>
-        <li><router-link to="category">Food</router-link></li>
-        <li><router-link to="category">Robots</router-link></li>
-        <li><router-link to="category">Food Robots</router-link></li>
-        <li><router-link to="category">Owls</router-link></li>
-        <li><router-link to="category">Things on Fire</router-link></li>
-        <li><router-link to="category">Purple</router-link></li>
-        <li><router-link to="category">Magic Tricks</router-link></li>
-        <li><router-link to="category">Smells</router-link></li>
+      <li v-bind:key="category.name" v-for="category in categories">
+        <router-link :to=category.route>{{category.name}}</router-link>
+      </li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-        <li><router-link to="category">Buildings</router-link></li>
-        <li><router-link to="category">Food</router-link></li>
-        <li><router-link to="category">Robots</router-link></li>
-        <li><router-link to="category">Food Robots</router-link></li>
-        <li><router-link to="category">Owls</router-link></li>
-        <li><router-link to="category">Things on Fire</router-link></li>
-        <li><router-link to="category">Purple</router-link></li>
-        <li><router-link to="category">Magic Tricks</router-link></li>
-        <li><router-link to="category">Smells</router-link></li>
+      <li v-bind:key="category.name" v-for="category in categories">
+        <router-link :to=category.route>{{category.name}}</router-link>
+      </li>
     </ul>
   
   </div>
@@ -48,8 +56,67 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
+  data() {
+    return {
+      categories: [
+        {
+          name: 'Buildings',
+          route: 'category'
+        },
+        {
+          name: 'Food',
+          route: 'category'
+        },
+        {
+          name: 'Robots',
+          route: 'category'
+        },
+        {
+          name: 'Food Robots',
+          route: 'category'
+        },
+        {
+          name: 'Owls',
+          route: 'category'
+        },
+        {
+          name: 'Things on Fire',
+          route: 'category'
+        },
+        {
+          name: 'Purple',
+          route: 'category'
+        },
+        {
+          name: 'Magic Tricks',
+          route: 'category'
+        },
+        {
+          name: 'Smells',
+          route: 'category'
+        }
+      ]
+    }
+  },
+  computed: {
+    activeObject: function () {
+      return {
+        activeRecent: this.$route.name == 'Recent',
+        activeCategory: this.$route.name == 'Category'
+      }
+    },
+    categoryObject: function () {
+      let cat = 'Categories';
+      if (this.$route.name == 'Category') {
+        cat = 'Category: Buildings';
+      }
+      return {
+        name: cat
+      }
+    }
+  },
   mounted() {
-    M.AutoInit(); // That way, it is only initialized when the component is mounted
+    M.AutoInit();
   }
 }
 </script>
