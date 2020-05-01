@@ -4,7 +4,7 @@
       <h3 class="header center teal-text">{{ name }}</h3>
       <div v-if="loading" class="center">Loading...</div>
       <div v-if="error" class="center">{{ error }}</div>
-      <h5 v-if="data" class="center teal-text text-lighten-2">6 videos</h5>
+      <h5 v-if="data" class="center teal-text text-lighten-2">videos 1 - 6 of {{data.pageInfo.totalResults}}</h5>
     </div>
 
     <div v-if="data" class="section">
@@ -35,7 +35,7 @@
     <div v-if="data" class="section">
       <ul class="pagination center">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active red lighten-1"><router-link to="category">1</router-link></li>
+        <li class="active red lighten-1"><a href="#">1</a></li>
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
       </ul>
     </div>
