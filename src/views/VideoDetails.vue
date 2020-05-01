@@ -67,7 +67,7 @@ export default {
         return
       }
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.$route.query.id}&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc&part=snippet,statistics`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.$route.query.id}&key=${this.$apiKey}&part=snippet,statistics`)
         .then(response => {
           this.loading = false;
           if (response.data.pageInfo.totalResults == 0) {

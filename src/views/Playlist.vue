@@ -78,7 +78,7 @@ export default {
         return
       }
       axios
-        .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=6&playlistId=${this.$route.query.id}&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc`)
+        .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=6&playlistId=${this.$route.query.id}&key=${this.$apiKey}`)
         .then(response => {
           this.loading = false;
           // console.log(response.data);

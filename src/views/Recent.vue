@@ -80,7 +80,7 @@ export default {
       this.loading = true;
       this.error = null;
       axios
-        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.channelId}&maxResults=12&order=date&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc`)
+        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.channelId}&maxResults=12&order=date&key=${this.$apiKey}`)
         .then(response => {
           this.loading = false;
           this.data = response.data;
