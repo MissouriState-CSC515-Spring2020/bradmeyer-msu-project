@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-const Recent = () => import('../views/Recent.vue')
-const Playlist = () => import('../views/Playlist.vue')
-const VideoDetails = () => import('../views/VideoDetails.vue')
+const Recent = () => import('../views/Recent.vue');
+const Playlist = () => import('../views/Playlist.vue');
+const VideoDetails = () => import('../views/VideoDetails.vue');
 
 Vue.use(VueRouter);
 
