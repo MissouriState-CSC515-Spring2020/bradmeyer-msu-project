@@ -44,7 +44,6 @@
 
 <script>
 const VideoCard = () => import('../components/widgets/VideoCard')
-//import VideoCard from '../components/widgets/VideoCard'
 import axios from 'axios';
 export default {
   name: 'Playlist',
