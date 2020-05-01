@@ -6,13 +6,15 @@
       <div v-if="error" class="center">{{ error }}</div>
     </div>
 
-    <div class="section">
+    <div v-if="videoData" class="section">
       <div class="row">
-        <div v-if="videoData" class="col s12">
-          <img class="center" v-bind:src=videoData.items[0].snippet.thumbnails.high.url>
+        <div class="col s12">
+          <div class="video-container">
+            <iframe id="player" width="853" height="480" type="text/html" :src="'https://www.youtube.com/embed/'+videoData.items[0].id+'?autoplay=0&'" frameborder="0"></iframe>
+          </div>
         </div>
       </div>
-      <div v-if="videoData" class="row">
+      <div class="row">
         <div class="col s6">
           <div class="card teal lighten-5">
             <div class="card-content">
