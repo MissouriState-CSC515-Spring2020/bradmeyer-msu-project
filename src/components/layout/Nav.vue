@@ -37,15 +37,15 @@
       </div>
     </nav>
 
-    <!-- dropdown structure for categories -->
+    <!-- dropdown structure for playlists -->
     <ul id="dropdown1" class="dropdown-content">
-      <li v-bind:key="category.name" v-for="category in categories">
-        <router-link :to=category.route>{{category.name}}</router-link>
+      <li v-bind:key="playlist.name" v-for="playlist in playlists">
+        <router-link :to="'playlist?id='+playlist.id">{{playlist.name}}</router-link>
       </li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-      <li v-bind:key="category.name" v-for="category in categories">
-        <router-link :to=category.route>{{category.name}}</router-link>
+      <li v-bind:key="playlist.name" v-for="playlist in playlists">
+        <router-link :to="'playlist?id='+playlist.id">{{playlist.name}}</router-link>
       </li>
     </ul>
   
@@ -56,39 +56,9 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
-  props: ["channelName", "channelID"],
+  props: ["playlists"],
   data() {
     return {
-      categories: [
-        {
-          name: 'Landings',
-          route: 'playlist?id=PLBQ5P5txVQr-Q68JtHuTTBWldX2psIqA1'
-        },
-        {
-          name: 'Launches',
-          route: 'playlist?id=PLC474234E124B5213'
-        },
-        {
-          name: 'Featured Videos',
-          route: 'playlist?id=PLF0D3A9748DC5E42D'
-        },
-        {
-          name: 'SpaceX: Advanced Testing',
-          route: 'playlist?id=PL5691F20A94B40827'
-        },
-        {
-          name: 'SpaceX: What\'s Next',
-          route: 'playlist?id=PL804F06E0DFC20878'
-        },
-        {
-          name: 'SpaceX: Our Vision',
-          route: 'playlist?id=PL65D245A30E8B8F67'
-        },
-        {
-          name: 'SpaceX: Tours',
-          route: 'playlist?id=PL4421AD45A1247EDA'
-        }
-      ]
     }
   },
   computed: {
