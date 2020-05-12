@@ -8,6 +8,10 @@ module.exports = {
 
 		// configure the workbox plugin
 		workboxPluginMode: 'GenerateSW',
+		
+		workboxOptions: {
+			navigateFallback: 'index.html'
+		},
 
 		manifestOptions: {
 			name: 'CSC515/615 Photo App',

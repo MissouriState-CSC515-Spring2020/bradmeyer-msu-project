@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Recent from '../views/Recent.vue';
-import Category from '../views/Category.vue';
-import PhotoDetails from '../views/PhotoDetails.vue';
+import Playlist from '../views/Playlist.vue';
+import VideoDetails from '../views/VideoDetails.vue';
 
 Vue.use(VueRouter);
 
@@ -12,23 +12,25 @@ const routes = [
 		name: 'Recent',
 		component: Recent,
 		meta: {
-			title: 'Recent Photos'
+			title: 'Recent Videos'
 		}
 	},
 	{
-		path: '/category',
-		name: 'Category',
-		component: Category,
+		path: '/playlist',
+		name: 'Playlist',
+		component: Playlist,
+		props: true,
 		meta: {
-			title: 'Category: Buildings'
+			title: 'Playlist'
 		}
 	},
 	{
-		path: '/photodetails',
-		name: 'PhotoDetails',
-		component: PhotoDetails,
+		path: '/videodetails',
+		name: 'VideoDetails',
+		component: VideoDetails,
+		props: true,
 		meta: {
-			title: 'Photo Details'
+			title: 'Video Details'
 		}
 	}
 ];
@@ -44,7 +46,7 @@ router.afterEach((to, from) => {
 	// Use next tick to handle router history correctly
 	// see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
 	Vue.nextTick(() => {
-		document.title = to.meta.title || 'Photo App Project';
+		document.title = to.meta.title || 'Video App Project';
 	});
 });
 
