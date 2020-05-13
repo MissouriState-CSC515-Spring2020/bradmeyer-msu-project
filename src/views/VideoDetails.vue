@@ -6,13 +6,15 @@
       <div v-if="error" class="center">{{ error }}</div>
     </div>
 
-    <div class="section">
+    <div v-if="videoData" class="section">
       <div class="row">
-        <div v-if="videoData" class="col s12">
-          <img class="center" v-bind:src=videoData.items[0].snippet.thumbnails.high.url>
+        <div class="col s12">
+          <div class="video-container">
+            <iframe id="player" width="853" height="480" type="text/html" :src="'https://www.youtube.com/embed/'+videoData.items[0].id+'?autoplay=0&'" frameborder="0"></iframe>
+          </div>
         </div>
       </div>
-      <div v-if="videoData" class="row">
+      <div class="row">
         <div class="col s6">
           <div class="card teal lighten-5">
             <div class="card-content">
@@ -38,6 +40,7 @@
 import axios from 'axios';
 export default {
   name: 'VideoDetails',
+  props: ["channelName", "channelId"],
   data() {
     return {
       loading: false,
@@ -64,7 +67,7 @@ export default {
         return
       }
       axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.$route.query.id}&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc&part=snippet,statistics`)
+        .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.$route.query.id}&key=${this.$apiKey}&part=snippet,statistics`)
         .then(response => {
           this.loading = false;
           if (response.data.pageInfo.totalResults == 0) {
@@ -74,6 +77,7 @@ export default {
           }
         })
         .catch(error => {
+          // eslint-disable-next-line no-console
           console.log(error);
           this.loading = false;
           this.error = "Something went wrong while fetching the video data."

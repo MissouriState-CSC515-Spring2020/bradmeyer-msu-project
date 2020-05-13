@@ -3,13 +3,13 @@
     <nav class="teal darken-3">
       <div class="nav-wrapper container">
           <span id="logo-container">
-            <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icon_photo_gallery.png" width="65"></router-link>
+            <router-link to="/"><img class="icon hide-on-med-and-down" src="img/icons8-youtube-64.png"></router-link>
             <router-link to="/" class="brand-logo">Video App</router-link>
           </span>
 
           <ul class="right hide-on-med-and-down">
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
-              <router-link to="/videodetails">Video Details</router-link>
+              <a href="#">Video Details</a>
             </li>
             <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
@@ -24,7 +24,7 @@
 
           <ul id="mobile-menu" class="sidenav">
             <li v-if="this.$route.name == 'VideoDetails'" class="active">
-              <router-link to="/videodetails">Video Details</router-link>
+              <a href="#">Video Details</a>
             </li>
             <li v-bind:class="recentClassObj">
               <router-link to="/">Recent</router-link>
@@ -37,15 +37,15 @@
       </div>
     </nav>
 
-    <!-- dropdown structure for categories -->
+    <!-- dropdown structure for playlists -->
     <ul id="dropdown1" class="dropdown-content">
-      <li v-bind:key="category.name" v-for="category in categories">
-        <router-link :to=category.route>{{category.name}}</router-link>
+      <li v-bind:key="playlist.name" v-for="playlist in playlists">
+        <router-link :to="'playlist?id='+playlist.id">{{playlist.name}}</router-link>
       </li>
     </ul>
     <ul id="dropdown2" class="dropdown-content">
-      <li v-bind:key="category.name" v-for="category in categories">
-        <router-link :to=category.route>{{category.name}}</router-link>
+      <li v-bind:key="playlist.name" v-for="playlist in playlists">
+        <router-link :to="'playlist?id='+playlist.id">{{playlist.name}}</router-link>
       </li>
     </ul>
   
@@ -56,38 +56,9 @@
 import M from 'materialize-css';
 export default {
   name: 'Nav',
+  props: ["playlists"],
   data() {
     return {
-      categories: [
-        {
-          name: 'Landings',
-          route: 'playlist?id=PLBQ5P5txVQr-Q68JtHuTTBWldX2psIqA1'
-        },
-        {
-          name: 'Launches',
-          route: 'playlist?id=PLC474234E124B5213'
-        },
-        {
-          name: 'Featured Videos',
-          route: 'playlist?id=PLF0D3A9748DC5E42D'
-        },
-        {
-          name: 'SpaceX: Advanced Testing',
-          route: 'playlist?id=PL5691F20A94B40827'
-        },
-        {
-          name: 'SpaceX: What\'s Next',
-          route: 'playlist?id=PL804F06E0DFC20878'
-        },
-        {
-          name: 'SpaceX: Our Vision',
-          route: 'playlist?id=PL65D245A30E8B8F67'
-        },
-        {
-          name: 'SpaceX: Tours',
-          route: 'playlist?id=PL4421AD45A1247EDA'
-        }
-      ]
     }
   },
   computed: {
@@ -102,10 +73,13 @@ export default {
       }
     },
     playlistNameObj: function () {
+      // This was originally so that the navbar could show the name
+      // of the selected playlist, but it might be really long, and
+      // there are lots of other reasons that might be a bad idea
       let pl = 'Playlists';
-      if (this.$route.name == 'Playlist') {
-        pl = 'Playlist';
-      }
+      // if (this.$route.name == 'Playlist') {
+      //  pl = 'Playlist';
+      // }
       return {
         name: pl
       }

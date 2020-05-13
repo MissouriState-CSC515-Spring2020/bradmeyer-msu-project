@@ -56,17 +56,16 @@
 </template>
 
 <script>
-import VideoCard from '../components/widgets/VideoCard'
+const VideoCard = () => import('../components/widgets/VideoCard')
 import axios from 'axios';
 export default {
   name: 'Recent',
+  props: ["channelName", "channelId"],
   components: {
     VideoCard
   },
   data() {
     return {
-      channelName: 'SpaceX',
-      channelID: 'UCtI0Hodo5o5dUb67FeUjDeA',
       loading: false,
       error: null,
       data: null
@@ -81,12 +80,13 @@ export default {
       this.loading = true;
       this.error = null;
       axios
-        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.channelID}&maxResults=12&order=date&key=AIzaSyBgJ9iFaO-Nea2h-11zox562hHgXR0x0gc`)
+        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.channelId}&maxResults=12&order=date&key=${this.$apiKey}`)
         .then(response => {
           this.loading = false;
           this.data = response.data;
         })
         .catch(error => {
+          // eslint-disable-next-line no-console
           console.log(error);
           this.loading = false;
           this.error = "Something went wrong while fetching the recent videos."

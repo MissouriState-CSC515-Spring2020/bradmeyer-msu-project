@@ -14,8 +14,8 @@ module.exports = {
 		},
 
 		manifestOptions: {
-			name: 'CSC515/615 Photo App',
-			short_name: 'Photo App',
+			name: 'CSC515/615 Video App',
+			short_name: 'Video App',
 			start_url: '.',
 			display: 'standalone',
 			theme_color: '#00695c',

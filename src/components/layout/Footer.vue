@@ -24,7 +24,7 @@
               <a href="https://materializecss.com/" target="_blank" class="yellow-text text-lighten-3">Materialize CSS</a>
             </li>
             <li class="valign-wrapper"><i class="material-icons">chevron_right</i>
-              <a href="https://icons8.com/icons/set/stack-of-photos--v1" target="_blank" class="yellow-text text-lighten-3">Photo Gallery icon</a>
+              <a href="https://icons8.com/icons/set/youtube" target="_blank" class="yellow-text text-lighten-3">YouTube icon</a>
               <span>by</span>
               <a href="https://icons8.com/" target="_blank" class="yellow-text text-lighten-3">Icons8</a>
             </li>

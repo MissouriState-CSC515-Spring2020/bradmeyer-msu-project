@@ -1,8 +1,8 @@
-# Project Checkpoint 5
+# Project Checkpoint 6
 
 ## Installation
 
-Clone checkpoint-05 branch.
+Clone checkpoint-06 branch.
 
 `npm install`
 
